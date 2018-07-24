@@ -8,12 +8,13 @@ class ECHO_SHARED_EXPORT Echo : public QObject {
     Q_OBJECT
 public:
     explicit Echo(QObject* parent = nullptr);
-    bool addPlayer(const QString& name);
+    void addPlayer(const QString& name);
 public slots:
 private slots:
 signals:
+    void playerAdded(QString, bool);
 private:
-    QList<Player*> m_playerList;
+    QHash<QString, Player*> m_playerData;
 };
 
 #endif
