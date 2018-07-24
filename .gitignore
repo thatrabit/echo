@@ -1,0 +1,6 @@
+/release
+/debug
+.qmake.stash
+Makefile*
+target_wrapper.bat
+.vscode
