@@ -1,7 +1,8 @@
-#ifndef ECHO_PLAYER_H
-#define ECHO_PLAYER_H
+#ifndef ECHO_PLAYER_HPP
+#define ECHO_PLAYER_HPP
 
-#include "global.h"
+#include "global.hpp"
+#include "amount.hpp"
 
 class ECHO_SHARED_EXPORT Player : public QObject {
     Q_OBJECT
@@ -15,13 +16,13 @@ public:
 public slots:
     void updateName(const QString& name);
     void updatePnl(const qint64& pnl);
-private slots:
 signals:
     void nameUpdated();
     void pnlUpdated(qint64);
 private:
     QString m_name;
-    qint64 m_pnl;
+    Amount m_pnl;
+private slots:
 };
 
 #endif

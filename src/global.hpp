@@ -1,5 +1,5 @@
-#ifndef ECHO_GLOBAL_H
-#define ECHO_GLOBAL_H
+#ifndef ECHO_GLOBAL_HPP
+#define ECHO_GLOBAL_HPP
 
 #include <QtCore/QtCore>
 

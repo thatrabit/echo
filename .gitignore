@@ -4,3 +4,4 @@
 Makefile*
 target_wrapper.bat
 .vscode
+object_script.*

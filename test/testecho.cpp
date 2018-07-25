@@ -1,4 +1,4 @@
-#include "testecho.h"
+#include "testecho.hpp"
 
 void TestEcho:: initTestCase() {
     echo = new Echo;
@@ -19,7 +19,7 @@ void TestEcho::testAddPlayer_data() {
     QTest::addColumn<QString>("name");
     QTest::addColumn<QString>("signal_arg_0");
     QTest::addColumn<bool>("signal_arg_1");
-    QTest::newRow("john 1") << "john" << "john" << true;
-    QTest::newRow("tom 1") << "tom" << "tom" << true;
-    QTest::newRow("john 2") << "john" << "john" << false;
+    QTest::newRow("john") << "john" << "john" << true;
+    QTest::newRow("tom") << "tom" << "tom" << true;
+    QTest::newRow("john") << "john" << "john" << false;
 }

@@ -1,7 +1,7 @@
 #include <QtTest/QTest>
 
-#include "testplayer.h"
-#include "testecho.h"
+#include "testplayer.hpp"
+#include "testecho.hpp"
 
 int main(int argc, char** argv) {
     int status = 0;

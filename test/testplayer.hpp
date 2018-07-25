@@ -1,15 +1,16 @@
 #include <QtTest/QTest>
 #include <QtTest/QSignalSpy>
 
-#include "src/player.h"
+#include "src/player.hpp"
 
 class TestPlayer : public QObject {
     Q_OBJECT
+private:
+    Player* player;
 private slots:
     void initTestCase();
     void testName();
+    void testName_data();
     void testPnl();
-private:
-    Player* player;
-    Player* player_with_name;
+    void testPnl_data();
 };

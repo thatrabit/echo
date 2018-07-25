@@ -1,9 +1,9 @@
 QT -= gui
 
-CONFIG += c++11
+CONFIG += c++11 silent
 
 HEADERS += \
-    src/*.h \
+    src/*.hpp \
 
 SOURCES += \
     src/*.cpp \
@@ -15,7 +15,7 @@ test {
     CONFIG += testcase
 
     HEADERS += \
-        test/*.h
+        test/*.hpp
 
     SOURCES += \
         test/*.cpp

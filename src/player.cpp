@@ -1,12 +1,14 @@
-#include "player.h"
+#include "player.hpp"
 
 Player::Player(QObject* parent)
     : QObject(parent) {
+    m_pnl.updateValue(0);
 }
 
 Player::Player(const QString& name, QObject* parent)
     : QObject(parent)
     , m_name(name) {
+    m_pnl.updateValue(0);
 }
 
 QString Player::name() const {
@@ -14,7 +16,7 @@ QString Player::name() const {
 }
 
 qint64 Player::pnl() const {
-    return m_pnl;
+    return m_pnl.value();
 }
 
 void Player::updateName(const QString& name) {
@@ -25,8 +27,8 @@ void Player::updateName(const QString& name) {
 }
 
 void Player::updatePnl(const qint64& pnl) {
-    if (pnl == m_pnl)
+    if (pnl == m_pnl.value())
         return;
-    m_pnl = pnl;
-    emit pnlUpdated(m_pnl);
+    m_pnl.updateValue(pnl);
+    emit pnlUpdated(m_pnl.value());
 }
