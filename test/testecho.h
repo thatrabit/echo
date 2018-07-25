@@ -8,6 +8,7 @@ class TestEcho : public QObject {
 private slots:
     void initTestCase();
     void testAddPlayer();
+    void testAddPlayer_data();
 private:
     Echo* echo;
 };
