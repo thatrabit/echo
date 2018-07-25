@@ -1,5 +1,6 @@
 #include <QtTest/QTest>
 
+#include "testamount.hpp"
 #include "testplayer.hpp"
 #include "testecho.hpp"
 
@@ -9,6 +10,7 @@ int main(int argc, char** argv) {
         status |= QTest::qExec(obj, argc, argv);
     };
 
+    run(new TestAmount);
     run(new TestPlayer);
     run(new TestEcho);
 
