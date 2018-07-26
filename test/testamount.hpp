@@ -1,7 +1,7 @@
 #include <QtTest/QTest>
 #include <QtTest/QSignalSpy>
 
-#include "src/amount.hpp"
+#include "lib/amount.hpp"
 
 class TestAmount : public QObject {
     Q_OBJECT

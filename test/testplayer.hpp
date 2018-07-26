@@ -1,7 +1,7 @@
 #include <QtTest/QTest>
 #include <QtTest/QSignalSpy>
 
-#include "src/player.hpp"
+#include "lib/player.hpp"
 
 class TestPlayer : public QObject {
     Q_OBJECT

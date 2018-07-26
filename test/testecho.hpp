@@ -1,7 +1,7 @@
 #include <QtTest/QTest>
 #include <QtTest/QSignalSpy>
 
-#include "src/echo.hpp"
+#include "lib/echo.hpp"
 
 class TestEcho : public QObject {
     Q_OBJECT

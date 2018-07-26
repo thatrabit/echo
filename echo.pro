@@ -1,7 +1,8 @@
 QT -= gui
+QT += remoteobjects
 CONFIG += c++11 silent
-HEADERS += src/*.hpp
-SOURCES += src/*.cpp
+HEADERS += lib/*.hpp
+SOURCES += lib/*.cpp
 
 test {
     TEMPLATE = app
@@ -17,6 +18,7 @@ test {
 }
 
 gui {
+    DEFINES -= ECHO_LIBRARY
     TEMPLATE = app
     TARGET = echo_gui
     QT += gui quick quickcontrols2
