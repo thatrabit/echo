@@ -1,9 +1,9 @@
 #ifndef ECHO_AMOUNT_HPP
 #define ECHO_AMOUNT_HPP
 
-#include "global.hpp"
+#include <QtCore/QtCore>
 
-class ECHO_SHARED_EXPORT Amount : public QObject {
+class Amount : public QObject {
     Q_OBJECT
     Q_PROPERTY(qint64 value READ value WRITE updateValue NOTIFY valueUpdated)
 public:

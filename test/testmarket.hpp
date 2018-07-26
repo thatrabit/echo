@@ -1,7 +1,7 @@
 #include <QtTest/QTest>
 #include <QtTest/QSignalSpy>
 
-#include "lib/market.hpp"
+#include "src/market.hpp"
 
 class TestMarket : public QObject {
     Q_OBJECT

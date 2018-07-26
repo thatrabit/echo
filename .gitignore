@@ -3,5 +3,5 @@
 .qmake.stash
 Makefile*
 target_wrapper.bat
-.vscode
+/.vscode
 object_script.*

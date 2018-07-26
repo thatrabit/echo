@@ -1,10 +1,9 @@
 #ifndef ECHO_PLAYER_HPP
 #define ECHO_PLAYER_HPP
 
-#include "global.hpp"
 #include "amount.hpp"
 
-class ECHO_SHARED_EXPORT Player : public QObject {
+class Player : public QObject {
     Q_OBJECT
     Q_PROPERTY(QString name READ name WRITE updateName NOTIFY nameUpdated)
     Q_PROPERTY(qint64 pnl READ pnl WRITE updatePnl NOTIFY pnlUpdated)

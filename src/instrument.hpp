@@ -1,10 +1,9 @@
 #ifndef ECHO_INSTRUMENT_HPP
 #define ECHO_INSTRUMENT_HPP
 
-#include "global.hpp"
 #include "amount.hpp"
 
-class ECHO_SHARED_EXPORT Instrument : public QObject {
+class Instrument : public QObject {
     Q_OBJECT
     Q_PROPERTY(QString symbol READ symbol WRITE updateSymbol NOTIFY symbolUpdated);
 public:

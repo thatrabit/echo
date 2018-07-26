@@ -1,10 +1,9 @@
 #ifndef ECHO_MARKET_HPP
 #define ECHO_MARKET_HPP
 
-#include "global.hpp"
 #include "instrument.hpp"
 
-class ECHO_SHARED_EXPORT Market : public QObject {
+class Market : public QObject {
     Q_OBJECT
     Q_PROPERTY(QString mic READ mic WRITE updateMic NOTIFY micUpdated)
 public:
