@@ -1,7 +1,9 @@
 #ifndef ECHO_PLAYER_HPP
 #define ECHO_PLAYER_HPP
 
+#include <QtCore/QtCore>
 #include "amount.hpp"
+#include "order.hpp"
 
 class Player : public QObject {
     Q_OBJECT

@@ -1,6 +1,7 @@
 #ifndef ECHO_INSTRUMENT_HPP
 #define ECHO_INSTRUMENT_HPP
 
+#include <QtCore/QtCore>
 #include "amount.hpp"
 
 class Instrument : public QObject {

@@ -1,6 +1,7 @@
 #ifndef ECHO_GAME_HPP
 #define ECHO_GAME_HPP
 
+#include <QtCore/QtCore>
 #include "player.hpp"
 #include "market.hpp"
 

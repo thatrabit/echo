@@ -1,7 +1,9 @@
 #ifndef ECHO_MARKET_HPP
 #define ECHO_MARKET_HPP
 
+#include <QtCore/QtCore>
 #include "instrument.hpp"
+#include "order.hpp"
 
 class Market : public QObject {
     Q_OBJECT
