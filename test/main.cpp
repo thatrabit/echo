@@ -3,6 +3,8 @@
 #include "testamount.hpp"
 #include "testplayer.hpp"
 #include "testinstrument.hpp"
+#include "testmarket.hpp"
+#include "testgame.hpp"
 #include "testecho.hpp"
 
 int main(int argc, char** argv) {
@@ -14,6 +16,8 @@ int main(int argc, char** argv) {
     run(new TestAmount);
     run(new TestPlayer);
     run(new TestInstrument);
+    run(new TestMarket);
+    run(new TestGame);
     run(new TestEcho);
 
     return status;

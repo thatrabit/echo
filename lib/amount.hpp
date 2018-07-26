@@ -3,7 +3,7 @@
 
 #include "global.hpp"
 
-class Amount : public QObject {
+class ECHO_SHARED_EXPORT Amount : public QObject {
     Q_OBJECT
     Q_PROPERTY(qint64 value READ value WRITE updateValue NOTIFY valueUpdated)
 public:

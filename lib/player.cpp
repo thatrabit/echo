@@ -1,13 +1,10 @@
 #include "player.hpp"
 
-Player::Player(QObject* parent)
-    : QObject(parent) {
+Player::Player(QObject* parent) : QObject(parent) {
     m_pnl.updateValue(0);
 }
 
-Player::Player(const QString& name, QObject* parent)
-    : QObject(parent)
-    , m_name(name) {
+Player::Player(const QString& name, QObject* parent) : QObject(parent), m_name(name) {
     m_pnl.updateValue(0);
 }
 

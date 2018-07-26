@@ -9,6 +9,4 @@ private:
     Echo* echo;
 private slots:
     void initTestCase();
-    void testAddPlayer();
-    void testAddPlayer_data();
 };

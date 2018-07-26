@@ -1,8 +1,6 @@
 #include "amount.hpp"
 
-Amount::Amount(QObject* parent)
-    : QObject(parent)
-    , m_value(0) {
+Amount::Amount(QObject* parent) : QObject(parent), m_value(0) {
 }
 
 Amount::Amount(const qint64& value, QObject* parent)
