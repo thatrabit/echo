@@ -13,6 +13,6 @@ private slots:
     void testId_data();
     void testStartStop();
     void testStartStop_data();
-    void testAddOrder();
-    void testAddOrder_data();
+    void testAddOrder_slot();
+    void testAddOrder_slot_data();
 };

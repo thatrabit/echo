@@ -21,6 +21,8 @@ public:
 public slots:
 signals:
     void idUpdated();
+    void orderReceived(QString, qint64);
+    void activated(bool);
 private:
     QString m_id;
 private slots:

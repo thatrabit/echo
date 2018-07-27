@@ -7,6 +7,7 @@ Agent::~Agent() {
 }
 
 void Agent::addOrder_slot(QString symbol, qint64 quantity) {
+    emit orderReceived(symbol, quantity);
 }
 
 QString Agent::id() const {
@@ -21,11 +22,15 @@ void Agent::updateId(QString id) {
 }
 
 void Agent::start() {
-    if (isActive() == false)
+    if (isActive() == false) {
         setIsActive(true);
+        emit activated(true);
+    }
 }
 
 void Agent::stop() {
-    if(isActive() == true)
+    if(isActive() == true) {
         setIsActive(false);
+        emit activated(false);
+    }
 }

@@ -13,6 +13,8 @@ public:
     QString agentId() const;
     void updateAgentId(const QString& agentId);
 public slots:
+    void onOrderReceived(QString symbol, qint64 quantity);
+    void onAgentActivated(bool isActive);
 signals:
     void agentIdUpdated();
 private:

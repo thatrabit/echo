@@ -5,6 +5,8 @@ import Echo.Echo 0.1
 ApplicationWindow {
     title: "echo"
     visible: true
+    width: 800
+    height: 600
 
     Echo {
         id: core
