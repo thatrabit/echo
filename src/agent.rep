@@ -1,4 +1,4 @@
 class Agent {
-    PROP(bool currState=false);
-    SLOT(void server_slot(bool clientState));
+    PROP(bool isActive=false);
+    SLOT(void addOrder_slot(QString symbol, qint64 quantity));
 };

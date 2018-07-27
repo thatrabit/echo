@@ -1,24 +1,31 @@
 #include "agent.hpp"
 
 Agent::Agent(QObject* parent) : AgentSimpleSource(parent) {
-    stateChangeTimer = new QTimer(this);
-    connect(stateChangeTimer, SIGNAL(timeout()), this, SLOT(timeout_slot()));
-    stateChangeTimer->start(2000);
-    qDebug() << "source node started";
 }
 
 Agent::~Agent() {
-    stateChangeTimer->stop();
 }
 
-void Agent::server_slot(bool clientState) {
-    qDebug() << "replica state: " << clientState;
+void Agent::addOrder_slot(QString symbol, qint64 quantity) {
 }
 
-void Agent::timeout_slot() {
-    if (currState())
-        setCurrState(false);
-    else
-        setCurrState(true);
-    qDebug() << "source state: " << currState();
+QString Agent::id() const {
+    return m_id;
+}
+
+void Agent::updateId(QString id) {
+    if (id == m_id)
+        return;
+    m_id = id;
+    emit idUpdated();
+}
+
+void Agent::start() {
+    if (isActive() == false)
+        setIsActive(true);
+}
+
+void Agent::stop() {
+    if(isActive() == true)
+        setIsActive(false);
 }

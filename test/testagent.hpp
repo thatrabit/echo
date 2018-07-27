@@ -9,4 +9,10 @@ private:
     Agent* agent;
 private slots:
     void initTestCase();
+    void testId();
+    void testId_data();
+    void testStartStop();
+    void testStartStop_data();
+    void testAddOrder();
+    void testAddOrder_data();
 };

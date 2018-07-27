@@ -9,4 +9,16 @@ ApplicationWindow {
     Echo {
         id: core
     }
+
+    Row {
+        spacing: 4
+        TextField {
+            text: core.agentId
+            onTextChanged: core.agentId = text
+        }
+        TextField {
+            text: core.agentId
+            onTextChanged: core.agentId = text
+        }
+    }
 }

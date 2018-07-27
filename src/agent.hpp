@@ -13,12 +13,16 @@ class Agent : public AgentSimpleSource {
 public:
     explicit Agent(QObject* parent = nullptr);
     ~Agent();
-    virtual void server_slot(bool clientState);
+    virtual void addOrder_slot(QString symbol, qint64 quantity);
+    QString id() const;
+    void updateId(QString id);
+    void start();
+    void stop();
 public slots:
-    void timeout_slot();
 signals:
+    void idUpdated();
 private:
-    QTimer* stateChangeTimer;
+    QString m_id;
 private slots:
 };
 
