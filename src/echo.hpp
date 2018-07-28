@@ -2,23 +2,30 @@
 #define ECHO_ECHO_HPP
 
 #include <QtCore/QtCore>
+#include "instrument.hpp"
 #include "agent.hpp"
 
 class Echo : public QObject {
     Q_OBJECT
-    Q_PROPERTY(QString agentId READ agentId WRITE updateAgentId NOTIFY agentIdUpdated);
+    Q_PROPERTY(QString echoId READ echoId WRITE setEchoId NOTIFY echoIdChanged);
+    Q_PROPERTY(QString lastInstrumentSymbol READ lastInstrumentSymbol NOTIFY lastInstrumentSymbolChanged);
 public:
     explicit Echo(QObject* parent = nullptr);
     ~Echo();
-    QString agentId() const;
-    void updateAgentId(const QString& agentId);
+    QString echoId() const;
+    QString lastInstrumentSymbol() const;
+    void setEchoId(QString echoId);
+    Q_INVOKABLE void addInstrument(QString symbol);
 public slots:
     void onOrderReceived(QString symbol, qint64 quantity);
-    void onAgentActivated(bool isActive);
 signals:
-    void agentIdUpdated();
+    void echoIdChanged(QString);
+    void lastInstrumentSymbolChanged();
 private:
-    Agent* agent;
+    QString m_echoId;
+    QString m_lastInstrumentSymbol;
+    Agent* m_agent;
+    QHash<QString, Instrument*> m_instrumentHash;
 private slots:
 };
 

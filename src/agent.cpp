@@ -1,36 +1,18 @@
 #include "agent.hpp"
 
-Agent::Agent(QObject* parent) : AgentSimpleSource(parent) {
+Agent::Agent(QObject* parent) : AgentSimpleSource(parent), m_id("anon") {
+}
+
+Agent::Agent(const QString& id, QObject* parent) : AgentSimpleSource(parent), m_id(id) {
 }
 
 Agent::~Agent() {
 }
 
-void Agent::addOrder_slot(QString symbol, qint64 quantity) {
+void Agent::addOrder(QString symbol, qint64 quantity) {
     emit orderReceived(symbol, quantity);
 }
 
 QString Agent::id() const {
     return m_id;
-}
-
-void Agent::updateId(QString id) {
-    if (id == m_id)
-        return;
-    m_id = id;
-    emit idUpdated();
-}
-
-void Agent::start() {
-    if (isActive() == false) {
-        setIsActive(true);
-        emit activated(true);
-    }
-}
-
-void Agent::stop() {
-    if(isActive() == true) {
-        setIsActive(false);
-        emit activated(false);
-    }
 }

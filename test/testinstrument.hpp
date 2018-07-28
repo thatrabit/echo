@@ -6,7 +6,7 @@
 class TestInstrument : public QObject {
     Q_OBJECT
 private:
-    Instrument* instrument;
+    Instrument* data;
 private slots:
     void initTestCase();
     void testSymbol();

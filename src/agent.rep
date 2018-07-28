@@ -1,6 +1,4 @@
 class Agent {
-    ENUM Role {Market, Player};
-    PROP(Role role=Player);
-    PROP(bool isActive=false);
-    SLOT(void addOrder_slot(QString symbol, qint64 quantity));
+    PROP(bool isActive=false SOURCEONLYSETTER);
+    SLOT(void addOrder(QString symbol, qint64 quantity));
 };

@@ -1,7 +1,7 @@
 #include <QtGui/QGuiApplication>
 #include <QtQml/QQmlApplicationEngine>
 
-#include "src/echo.hpp"
+#include "echo.hpp"
 
 int main(int argc, char** argv) {
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);

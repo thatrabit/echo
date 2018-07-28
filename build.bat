@@ -1,3 +1,3 @@
 call build_rep.bat
-qmake "echo_test.pro"
+qmake "echo.pro"
 mingw32-make debug
